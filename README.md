@@ -10,6 +10,14 @@ Dahua Camera SDK Wrapper
     const string LIBRARYNETSDK_x64 = "CamLibs\\x64\\dhnetsdk.dll";
     const string LIBRARYCONFIGSDK_x64 = "CamLibs\\x64\\dhconfigsdk.dll";
     ```
+  - Add static entry points for x64.
+    ```C#
+    [DllImport(LIBRARYNETSDK_x64)]
+    public static extern int CLIENT_GetLastError_x64();
+    ...
+    others
+    ...
+    ```
 
   - Check platform by int size before function call.
     ```C#
