@@ -3,7 +3,7 @@ Dahua Camera SDK Wrapper
 
 # Changes
 - Support to platform target 'Any CPU'  
-  - Set library path for x86 and x64 respectively.
+  - Added library path for x86 and x64 respectively.
     ```C#
     const string LIBRARYNETSDK_x86 = "CamLibs\\x86\\dhnetsdk.dll";
     const string LIBRARYCONFIGSDK_x86 = "CamLibs\\x86\\dhconfigsdk.dll";
@@ -13,7 +13,7 @@ Dahua Camera SDK Wrapper
     You can download runtime dlls from dahua homepage.  
     Then put those to proper path.  
     In this case it will be './CamLibs'  
-  - Add static entry points for x64.
+  - Added static entry points for x64.
     ```C#
     [DllImport(LIBRARYNETSDK_x64)]
     public static extern int CLIENT_GetLastError_x64();
@@ -22,7 +22,7 @@ Dahua Camera SDK Wrapper
     ...
     ```
 
-  - Check platform by int size before function call.
+  - Added platform checking by int size before function call.
     ```C#
     bool result = (IntPtr.Size == 4)
                 ? OriginalSDK.CLIENT_ControlDevice(lLoginID, type, param, waittime)
