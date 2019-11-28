@@ -10,7 +10,7 @@ Dahua Camera SDK Wrapper
     const string LIBRARYNETSDK_x64 = "CamLibs\\x64\\dhnetsdk.dll";
     const string LIBRARYCONFIGSDK_x64 = "CamLibs\\x64\\dhconfigsdk.dll";
     ```  
-    You can download runtime dlls from dahua homepage.  
+    <b>You can download runtime dlls from dahua homepage.</b>  
     Then put those to proper path.  
     In this case it will be './CamLibs'  
   - Added static entry points for x64.
